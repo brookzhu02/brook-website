@@ -11,6 +11,7 @@ const App = () => {
       <Navbar />
       <div className="w-full px-2">
         <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

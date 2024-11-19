@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <div className="hidden md:flex items-center gap-8 text-lg text-gray-700 font-quicksand">
         <a href="/home" className="hover:text-blue-500 transition">
-          Hero
+          Home
         </a>
         <a href="/projects" className="hover:text-blue-500 transition">
           Projects
