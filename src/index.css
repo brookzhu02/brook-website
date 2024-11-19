@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@500&family=Geist+Mono:wght@100..900&family=Quicksand:wght@600&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Edu+AU+VIC+WA+NT+Pre:wght@500&family=Geist+Mono:wght@100..900&family=Quicksand:wght@600&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: "Quicksand", sans-serif;
+  --font-sourgummy: "Sour Gummy", sans-serif;
+  --font-secondary: "Edu AU VIC WA NT Pre", cursive;
+  --font-spicyrice: "Spicy Rice", sans-serif;
+  font-family: var(--font-primary);
+}
