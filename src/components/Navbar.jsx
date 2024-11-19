@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="flex items-center justify-between px-6 py-4 h-24">
       <div className="flex items-center">
         <a href="/home" className="hover:text-blue-400 transition">
-          <h1 className="text-6xl font-quicksand text-blue-500">brook.</h1>
+          <h1 className="text-6xl font-quicksand text-gray-600">brook.</h1>
         </a>
       </div>
 

@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import headshot from "../assets/Brooklyn.jpg";
 import emoji from "../assets/emoji.png";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaFilePdf } from "react-icons/fa";
+import resume from "../assets/resume.pdf"
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -62,7 +63,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 flex items-center font-quicksand text-sky-500"
+        className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 flex items-center font-quicksand text-purple-800"
       >
         🎓: University of Washington B.S. Computer Science 2024
       </motion.h1>
@@ -135,6 +136,18 @@ const Hero = () => {
           <FaEnvelope />
           <span>Email Me</span>
         </motion.a>
+
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          href={resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-red-600 text-white font-bold rounded-md shadow-lg flex items-center space-x-2 hover:bg-red-700 transition"
+        >
+          <FaFilePdf />
+          <span>Resume</span>
+        </motion.a>
       </motion.div>
 
       <div className="mt-16 w-full">
@@ -142,7 +155,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-sky-500 text-center"
+          className="text-gray-500 text-center"
         >
           <span className="text-lg md:text-xl font-quicksand">
             Made with ❤️ by Brooklyn
