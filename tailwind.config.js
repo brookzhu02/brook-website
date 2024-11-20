@@ -15,6 +15,8 @@ export default {
         'neutral-300': '#D6D6D6',
         'gray-800': '#2D2D2D',
         'beige-300': '#ECE2D0',
+        'customBlue': '#D1E0F4',
+        'beigeLine': '#FFF8DC'
       },
     },
   },

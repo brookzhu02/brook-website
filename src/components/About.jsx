@@ -46,7 +46,7 @@ const About = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 py-20 px-4 md:px-8 lg:px-16" id="about">
+    <div className="bg-gradient-to-b from-blue-50 via-beigeLine to-gray-200 py-20 px-4 md:px-8 lg:px-16" id="about">
       <div className="max-w-5xl mx-auto text-gray-800 dark:text-gray-200">
         <motion.h2
           initial={{ opacity: 0 }}
@@ -66,7 +66,7 @@ const About = () => {
           >
             <path
               d="M50 350 C150 150, 300 50, 500 200 C700 350, 850 150, 950 350"
-              stroke="#cccccc"
+              stroke="#5B5D5B"
               strokeWidth="3"
               fill="transparent"
             />
@@ -93,7 +93,7 @@ const About = () => {
                     y={y - 20}
                     textAnchor="middle"
                     fontSize="27"
-                    fill="#448EE4"
+                    fill="#274C77"
                     fontWeight="bold"
                     className="hover:font-extrabold"
                   >

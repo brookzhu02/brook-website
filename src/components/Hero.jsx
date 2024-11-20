@@ -35,7 +35,7 @@ const Hero = ({ scrollToAbout }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex flex-col items-center text-gray-800 dark:text-gray-200 p-6 bg-gradient-to-b from-gray-100 via-blue-300 to-gray-200 min-h-screen"
+      className="flex flex-col items-center text-gray-800 dark:text-gray-200 p-6 bg-gradient-to-b from-white via-customBlue to-blue-50 min-h-screen"
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
@@ -68,7 +68,7 @@ const Hero = ({ scrollToAbout }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-extrabold mb-2 flex items-center"
+        className="text-4xl md:text-6xl font-['monospace'] font-extrabold mb-2 flex items-center"
       >
         <motion.span
           className="mr-3 text-4xl"
