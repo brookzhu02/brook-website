@@ -10,6 +10,7 @@ import SplashScreen from "./components/SplashScreen";
 const App = () => {
   const [showSplash, setShowSplash] = useState(false);
 
+  const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
@@ -22,14 +23,10 @@ const App = () => {
     }
   }, []);
 
-  const scrollToAbout = () =>
-    aboutRef.current.scrollIntoView({ behavior: "smooth" });
-
-  const scrollToProjects = () =>
-    projectsRef.current.scrollIntoView({ behavior: "smooth" });
-
-  const scrollToContact = () =>
-    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToHome = () => homeRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div>
@@ -37,10 +34,15 @@ const App = () => {
         <SplashScreen onAnimationEnd={() => setShowSplash(false)} />
       ) : (
         <>
-          <Navbar />
-          <Hero
+          <Navbar
+            scrollToHome={scrollToHome}
+            scrollToProjects={scrollToProjects}
             scrollToAbout={scrollToAbout}
+            scrollToContact={scrollToContact}
           />
+          <div ref={homeRef}>
+            <Hero scrollToAbout={scrollToAbout} />
+          </div>
           <div ref={aboutRef}>
             <About />
           </div>
