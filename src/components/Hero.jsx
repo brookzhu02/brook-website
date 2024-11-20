@@ -35,7 +35,7 @@ const Hero = ({ scrollToAbout }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex flex-col items-center text-gray-800 dark:text-gray-200 p-6 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 min-h-screen"
+      className="flex flex-col items-center text-gray-800 dark:text-gray-200 p-6 bg-gradient-to-b from-gray-100 via-blue-300 to-gray-200 min-h-screen"
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
@@ -43,7 +43,7 @@ const Hero = ({ scrollToAbout }) => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative aspect-square w-48 md:w-64 lg:w-80 xl:w-96 group mb-2"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 via-gray-300 to-gray-400 rounded-full blur-xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 via-gray-300 to-gray-300 rounded-full blur-xl"></div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 600 600"
@@ -170,7 +170,7 @@ const Hero = ({ scrollToAbout }) => {
           <h2 className="text-xl md:text-2xl font-medium text-gray-600">
             hobbies 💡
           </h2>
-          <p className="text-lg md:text-xl text-blue-500">
+          <p className="text-lg md:text-xl lg:mb-10 text-blue-500">
             skydiving, eating, traveling, watching crime shows
           </p>
         </motion.div>
