@@ -41,7 +41,7 @@ const Hero = ({ scrollToAbout }) => {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative aspect-square w-48 md:w-64 lg:w-80 xl:w-96 group mb-8"
+        className="relative aspect-square w-48 md:w-64 lg:w-80 xl:w-96 group mb-2"
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 via-gray-300 to-gray-400 rounded-full blur-xl"></div>
         <svg
@@ -68,7 +68,7 @@ const Hero = ({ scrollToAbout }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-extrabold mb-4 flex items-center"
+        className="text-4xl md:text-6xl font-extrabold mb-2 flex items-center"
       >
         <motion.span
           className="mr-3 text-4xl"
@@ -85,7 +85,7 @@ const Hero = ({ scrollToAbout }) => {
         initial="hidden"
         animate="visible"
         variants={textVariants}
-        className="flex flex-col space-y-4 md:space-y-6 lg:space-y-8 mt-4 text-center"
+        className="flex flex-col space-y-4 md:space-y-6 lg:space-y-8 mt-2 text-center"
       >
         <motion.div variants={itemVariants}>
           <h2 className="text-xl md:text-2xl font-medium text-gray-600">
@@ -96,8 +96,60 @@ const Hero = ({ scrollToAbout }) => {
           </p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="flex flex-wrap justify-center gap-4 lg:mb-10"
+        >
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={scrollToAbout}
+            className="px-6 py-3 bg-gray-600 text-white font-medium rounded-full shadow-lg hover:bg-gray-700 transition"
+          >
+            About Me
+          </motion.button>
+
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            href="https://www.linkedin.com/in/brooklynzhu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-full shadow-lg flex items-center gap-2 hover:bg-blue-700 transition"
+          >
+            <FaLinkedin />
+            <span>LinkedIn</span>
+          </motion.a>
+
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            href="mailto:brookzhu02@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-green-500 text-white font-medium rounded-full shadow-lg flex items-center gap-2 hover:bg-green-600 transition"
+          >
+            <FaEnvelope />
+            <span>Email Me</span>
+          </motion.a>
+
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-red-600 text-white font-medium rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-900 transition"
+          >
+            <FaFilePdf />
+            <span>Resume</span>
+          </motion.a>
+      </motion.div>
+        
         <motion.div variants={itemVariants}>
-          <h2 className="text-xl md:text-2xl font-medium text-gray-600">
+          <h2 className="text-xl mr-5 md:text-2xl font-medium text-gray-600">
             currently:
           </h2>
           <p className="text-lg md:text-xl text-blue-500">
@@ -122,58 +174,6 @@ const Hero = ({ scrollToAbout }) => {
             skydiving, eating, traveling, watching crime shows
           </p>
         </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="flex flex-wrap justify-center gap-4 mt-10"
-      >
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={scrollToAbout} // Use the scrollToAbout prop to scroll
-          className="px-6 py-3 bg-gray-600 text-white font-medium rounded-full shadow-lg hover:bg-gray-700 transition"
-        >
-          About Me
-        </motion.button>
-
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          href="https://www.linkedin.com/in/brooklynzhu"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-blue-600 text-white font-medium rounded-full shadow-lg flex items-center gap-2 hover:bg-blue-700 transition"
-        >
-          <FaLinkedin />
-          <span>LinkedIn</span>
-        </motion.a>
-
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          href="mailto:brookzhu02@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-green-500 text-white font-medium rounded-full shadow-lg flex items-center gap-2 hover:bg-green-600 transition"
-        >
-          <FaEnvelope />
-          <span>Email Me</span>
-        </motion.a>
-
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          href={resume}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-red-600 text-white font-medium rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-900 transition"
-        >
-          <FaFilePdf />
-          <span>Resume</span>
-        </motion.a>
       </motion.div>
     </motion.div>
   );
