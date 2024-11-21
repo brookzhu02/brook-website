@@ -24,11 +24,11 @@ const Navbar = ({ scrollToHome, scrollToProjects, scrollToAbout, scrollToContact
         <button onClick={scrollToHome} className="hover:text-blue-500 transition">
           Home
         </button>
-        <button onClick={scrollToProjects} className="hover:text-blue-500 transition">
-          Projects
-        </button>
         <button onClick={scrollToAbout} className="hover:text-blue-500 transition">
           About
+        </button>
+        <button onClick={scrollToProjects} className="hover:text-blue-500 transition">
+          Projects
         </button>
         <button onClick={scrollToContact} className="hover:text-blue-500 transition">
           Contact
@@ -76,21 +76,21 @@ const Navbar = ({ scrollToHome, scrollToProjects, scrollToAbout, scrollToContact
           </button>
           <button
             onClick={() => {
-              scrollToProjects();
-              toggleMenu();
-            }}
-            className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition flex items-center"
-          >
-            Projects
-          </button>
-          <button
-            onClick={() => {
               scrollToAbout();
               toggleMenu();
             }}
             className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition flex items-center"
           >
             About
+          </button>
+          <button
+            onClick={() => {
+              scrollToProjects();
+              toggleMenu();
+            }}
+            className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition flex items-center"
+          >
+            Projects
           </button>
           <button
             onClick={() => {

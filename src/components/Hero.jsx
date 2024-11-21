@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import headshot from "../assets/Brooklyn.jpg";
 import { FaLinkedin, FaEnvelope, FaFilePdf } from "react-icons/fa";
 import resume from "../assets/resume.pdf";
+import currently from "../assets/currently.jpg"
+import shibaInu from "../assets/shibainu.jpg"
 
 const Hero = ({ scrollToAbout }) => {
   const textVariants = {
@@ -35,7 +37,7 @@ const Hero = ({ scrollToAbout }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex flex-col items-center text-gray-800 dark:text-gray-200 p-6 bg-gradient-to-b from-white via-customBlue to-blue-50 min-h-screen"
+      className="flex flex-col items-center text-gray-800 dark:text-gray-200 p-6 bg-gradient-to-b from-white via-gray-200 to-blue-50 min-h-screen"
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
@@ -68,7 +70,7 @@ const Hero = ({ scrollToAbout }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-['monospace'] font-extrabold mb-2 flex items-center"
+        className="text-4xl md:text-6xl font-black mb-6 flex items-center"
       >
         <motion.span
           className="mr-3 text-4xl"
@@ -85,7 +87,7 @@ const Hero = ({ scrollToAbout }) => {
         initial="hidden"
         animate="visible"
         variants={textVariants}
-        className="flex flex-col space-y-4 md:space-y-6 lg:space-y-8 mt-2 text-center"
+        className="flex flex-col space-y-4 md:space-y-6 lg:space-y-8 mt-4 text-center"
       >
         <motion.div variants={itemVariants}>
           <h2 className="text-xl md:text-2xl font-medium text-gray-600">
@@ -148,33 +150,54 @@ const Hero = ({ scrollToAbout }) => {
           </motion.a>
       </motion.div>
         
-        <motion.div variants={itemVariants}>
-          <h2 className="text-xl mr-5 md:text-2xl font-medium text-gray-600">
+      <motion.div variants={itemVariants} className="flex flex-col items-center text-center text-3xl">
+        <motion.a
+          href={currently}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2"
+        >
+
+          <h2 className="text-xl ml-6 md:text-2xl font-medium text-black">
             currently:
           </h2>
-          <p className="text-lg md:text-xl text-blue-500">
-            learning and building with AI! open to new opportunities!
-          </p>
-        </motion.div>
-
-        <motion.div variants={itemVariants}>
-          <h2 className="text-xl md:text-2xl font-medium text-gray-600">
-            interests 🌟
-          </h2>
-          <p className="text-lg md:text-xl text-blue-500">
-            AI, HCI, data visualization, fintech, economics
-          </p>
-        </motion.div>
-
-        <motion.div variants={itemVariants}>
-          <h2 className="text-xl md:text-2xl font-medium text-gray-600">
-            hobbies 💡
-          </h2>
-          <p className="text-lg md:text-xl lg:mb-10 text-blue-500">
-            skydiving, eating, traveling, watching crime shows
-          </p>
-        </motion.div>
+          <img
+            src={currently}
+            alt="Currently"
+            className="w-8 h-8 rounded-sm"
+          />
+        </motion.a>
+        <p className="text-lg md:text-xl text-blue-500">
+          learning and building with AI! open to new opportunities
+        </p>
       </motion.div>
+
+      <motion.div variants={itemVariants}>
+        <h2 className="text-xl md:text-2xl font-medium text-black">
+          interests 🌟
+        </h2>
+        <p className="text-lg md:text-xl text-blue-500">
+          AI, HCI, data visualization, fintech, economics
+        </p>
+      </motion.div>
+
+      <motion.div variants={itemVariants}>
+        <h2 className="text-xl md:text-2xl font-medium justify-center ml-6 text-black flex items-center gap-2">
+          hobbies 💡
+          <motion.a
+            href="https://youtube.com/shorts/6EhvLybOJFQ?si=-euDZEg0bqWIDxRF"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={shibaInu} className="w-6 h-6 rounded-full hover:scale-150 duration-300 transition-transform"
+            ></img>
+          </motion.a>
+        </h2>
+        <p className="text-lg md:text-xl lg:mb-10 text-blue-500">
+          skydiving, eating, running, traveling, watching crime shows
+        </p>
+      </motion.div>
+    </motion.div>
     </motion.div>
   );
 };

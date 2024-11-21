@@ -46,7 +46,7 @@ const About = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 via-beigeLine to-gray-200 py-20 px-4 md:px-8 lg:px-16" id="about">
+    <div className="bg-gradient-to-b from-blue-50 via-beige-line to-gray-200 py-20 px-4 md:px-8 lg:px-16" id="about">
       <div className="max-w-5xl mx-auto text-gray-800 dark:text-gray-200">
         <motion.h2
           initial={{ opacity: 0 }}
