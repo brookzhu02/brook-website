@@ -164,7 +164,7 @@ const Hero = ({ scrollToAbout }) => {
           <img
             src={currently}
             alt="Currently"
-            className="w-8 h-8 rounded-sm"
+            className="w-8 h-8 rounded-sm hover:scale-125 duration-300 transition-transform"
           />
         </motion.a>
         <p className="text-lg md:text-xl text-blue-500">
