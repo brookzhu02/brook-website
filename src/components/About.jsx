@@ -65,19 +65,19 @@ const About = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M50 350 C150 150, 300 50, 500 200 C700 350, 850 150, 950 350"
+              d="M50 350 C150 250, 300 150, 500 100 C700 50, 850 50, 950 50"
               stroke="#5B5D5B"
               strokeWidth="3"
               fill="transparent"
             />
             {milestones.map((milestone, index) => {
               const positions = [
-                { x: 230, y: 300 }, 
-                { x: 80, y: 200 },
-                { x: 320, y: 130 },
-                { x: 610, y: 200 },
-                { x: 670, y: 315 },
-                { x: 870, y: 255 }
+                { x: 210, y: 350 }, 
+                { x: 90, y: 260 },
+                { x: 230, y: 170 },
+                { x: 415, y: 100 },
+                { x: 650, y: 60 },
+                { x: 880, y: 55 }
               ];
 
               const { x, y } = positions[index];
