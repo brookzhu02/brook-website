@@ -27,7 +27,7 @@ const Project = () => {
         "Currently working on some fun & exciting AI projects! Stay tuned for updates.",
       image: dog2,
       github: "https://github.com/brookzhu02/brook-website",
-      demo: "https://www.youtube.com/shorts/z8EuI5bobe8",
+      demo: "https://youtube.com/shorts/tnfJJZg1IJc?si=kDjq7iktjJyxwNOi",
       technologies: ["dogz!!", "dogs!!", "doggos!!!"],
     },
   ];
