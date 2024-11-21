@@ -177,7 +177,7 @@ const Hero = ({ scrollToAbout }) => {
           interests 🌟
         </h2>
         <p className="text-lg md:text-xl text-blue-500">
-          AI, HCI, data visualization, fintech, economics
+          AI, full-stack, HCI, data visualization, fintech, economics
         </p>
       </motion.div>
 
